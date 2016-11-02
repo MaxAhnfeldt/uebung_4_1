@@ -6,17 +6,15 @@ public class BurchDarstellung {
 		int zaehler1 = 1;
 		int nenner1 = 1;
 		double loesung1 = 1;
-		while (loesung1 >= 0.01) {
-			bruchDarstellen(zaehler1, nenner1);
-			loesung1 = zaehler1 / nenner1;
-			nenner1 = nenner1 + zaehler1;
 
-		
+		while (loesung1 > 0.091) {
+			loesung1 = bruchDarstellen(zaehler1, nenner1);
+			nenner1 = nenner1 + zaehler1;
 
 		}
 	}
 
-	public static void bruchDarstellen(int a, int b) {
+	public static double bruchDarstellen(int a, int b) {
 		double loesung;
 		double c = a;
 		double d = b;
@@ -32,6 +30,7 @@ public class BurchDarstellung {
 			System.out.println("--- = " + loesung);
 		System.out.println(b);
 
+		return (loesung);
 	}
 
 }
